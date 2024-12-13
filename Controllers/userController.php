@@ -57,4 +57,34 @@ class userController {
             echo "Erreur lors de l'enregistrement de l'utilisateur.";
         }
     }
+
+    function verifieConnexion() {
+        $email = $_POST['email'];
+        $password = $_POST['pwd'];
+        
+        $requete = $this->pdo->prepare('SELECT * FROM users WHERE email = :email');
+        $requete->bindParam(':email', $email);
+        $requete->execute();
+        $user = $requete->fetch(PDO::FETCH_ASSOC);
+    
+    
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['identifiant'] = $user['identifiant'];
+            $_SESSION['email'] = $user['email'];
+
+            header('Location: ?c=listMessages');
+            
+        } else {
+            require_once(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'Views' . DIRECTORY_SEPARATOR . 'Users' . DIRECTORY_SEPARATOR . 'login.php');
+
+            echo "Mot de passe incorrect.";
+        }
+        
+    }
+
+    function deconnexion() {
+        session_destroy();
+        header('Location: ?c=listMessages');
+    }
 }
