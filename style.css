@@ -3,3 +3,35 @@
     margin-right: 20px;
     display: flex;    
 }
+
+#postPage{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+#createPost {
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+#boutons_nav {
+    margin-left: 10px;
+}
+
+#feed{
+    margin-top: 20px;
+}
+#buttons_for_post{
+    display: flex;
+    margin-top: 20px;
+}
+
+#utils_connected_user{
+    text-align: right;
+    margin-left: auto;
+}
+
+
