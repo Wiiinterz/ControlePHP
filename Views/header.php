@@ -24,7 +24,13 @@
                 </li>
             <?php } ?> 
             <li>
+<<<<<<< Updated upstream
                 <button id="theme-toggle" class="btn btn-secondary boutons_nav">Mode sombre</button>
+=======
+                <div class="theme-toggle">
+                  <img id="theme-icon" src="sun.png" alt="Mode clair" class="theme-icon">
+                </div>
+>>>>>>> Stashed changes
             </li>
 
             
