@@ -31,7 +31,7 @@
 
         </ul>
         <div id="Logo">
-            <img src="logo.png" alt="Logo">
+            <img id="logo" src="Logo.png" alt="Logo" class="logo">
         </div>
         <div class="connexion">
                 <?php if (isset($_SESSION['id'])) { ?>

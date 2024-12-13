@@ -1,4 +1,5 @@
 <script src="script.js"></script>
+<script src="theme.js"></script>
 
 <h1>Profil de l'utilisateur : <span id='profil_identifiant_titre'><?php echo $user['nom']; ?></span></h1>
 <div class="row">

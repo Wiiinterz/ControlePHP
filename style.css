@@ -4,6 +4,10 @@
     display: flex;    
 }
 
+.logo{
+    content: url('Logo.png');
+}
+
 #postPage{
     display: flex;
     flex-direction: column;
@@ -70,28 +74,9 @@ body.dark-theme{
     color: white;
 }
 
-#boutons_nav.dark-theme {
-    margin-left: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-}
 
 #feed.dark-theme{
     margin-top: 20px;
-    background-color: #333;
-    color: white;
-}
-#buttons_for_post.dark-theme{
-    display: flex;
-    margin-top: 20px;
-    background-color: #333;
-    color: white;
-}
-
-#utils_connected_user.dark-theme{
-    text-align: right;
-    margin-left: auto;
     background-color: #333;
     color: white;
 }
@@ -102,8 +87,18 @@ body.dark-theme .btn {
     border-color: #ffffff;
 }
 
+body.dark-theme .btn:hover {
+    background-color: #555555;
+    color: #ffffff;
+}
+
+
 body.dark-theme .card-body {
     background-color: #444444;
     color: #ffffff;
     border-color: #ffffff;
+}
+
+body.dark-theme .logo {
+    content: url('Logo_Dark_Mode.png');
 }
