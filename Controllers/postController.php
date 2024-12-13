@@ -45,9 +45,7 @@ class PostController {
         }
     }
 
-    /**
-     * Affiche le formulaire pour modifier un message
-     */
+   
     public function editMessage() {
 
         $messageId = $_GET['id'] ?? null;
@@ -63,9 +61,7 @@ class PostController {
         }
     }
 
-    /**
-     * Met à jour un message existant
-     */
+
     public function updateMessage() {
         if (!isset($_SESSION['id'])) {
             header('Location: index.php?c=login');
@@ -90,9 +86,7 @@ class PostController {
         }
     }
 
-    /**
-     * Supprime un message
-     */
+
     public function deleteMessage() {
         if (!isset($_SESSION['id'])) {
             header('Location: index.php?c=login');
