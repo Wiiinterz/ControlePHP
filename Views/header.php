@@ -37,16 +37,16 @@
                 <?php if (isset($_SESSION['id'])) { ?>
                     <ul class="nav d-flex flex-row">
                         <li class="nav-item  align-items-center">
-                            <a class="btn btn-outline-dark" id='boutons_nav' href="?c=deconnexion">Déconnexion</a>
+                            <a class="btn btn-outline-dark boutons_nav" href="?c=deconnexion">Déconnexion</a>
                         </li>
                     </ul>
                 <?php } else { ?>
                     <ul class="nav d-flex flex-row">
                         <li class="nav-item d-flex align-items-center">
-                            <a class="btn btn-outline-dark" id="boutons_nav" href="?c=inscription">Inscription</a>
+                            <a class="btn btn-outline-dark boutons_nav"  href="?c=inscription">Inscription</a>
                         </li>
                         <li class="nav-item d-flex align-items-center">
-                            <a class="btn btn-outline-dark" id="boutons_nav" href="?c=login">Connexion</a>
+                            <a class="btn btn-outline-dark boutons_nav"  href="?c=login">Connexion</a>
                         </li>
                     </ul>   
                 <?php } ?> 
