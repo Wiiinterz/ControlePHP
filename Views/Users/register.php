@@ -1,4 +1,4 @@
-<h1>Inscription à la Cosina</h1>
+<h1>Inscription</h1>
 
 <form action="?c=inscrire" method="post">
 
