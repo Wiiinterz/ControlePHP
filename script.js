@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-
+    let modifier_profil = document.getElementById('bouton_modifier_profil');
     const buttons = document.querySelectorAll('.comment-button');
 
     function showComment() {
@@ -64,4 +64,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    profil_identifiant?.addEventListener('input', (event) => {
+        modifier_profil.classList.remove('d-none');
+    });
+
+    profil_mail?.addEventListener('input', (event) => {
+        modifier_profil.classList.remove('d-none');
+    });
 });

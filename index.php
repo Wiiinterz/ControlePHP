@@ -72,6 +72,14 @@ if (isset($_GET['c'])) {
         case 'showPostComment':
             $commentController->showPostComment();
             break;
+            
+        case'profil':
+            $userController->profil();
+            break;
+
+        case 'modifier_profil':
+            $userController->modifier_profil();
+            break;
 
         default:
             $postController->listMessages();

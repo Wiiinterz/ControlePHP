@@ -12,11 +12,15 @@
     <nav class="navbar navbar-expand-lg">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item d-flex align-items-center">
-                <a class="btn btn-outline-dark" id="boutons_nav" href="?c=listMessages">Feed des messages</a>
+                <a class="btn btn-outline-dark boutons_nav" href="?c=listMessages">Feed des messages</a>
             </li>
             <?php if (isset($_SESSION['id'])) { ?>
                 <li class="nav-item d-flex align-items-center">
-                    <a class="btn btn-outline-dark" id="boutons_nav" href="?c=createPost">Créer un message</a>
+                    <a class="btn btn-outline-dark boutons_nav" href="?c=createPost">Créer un message</a>
+                </li>
+                <li class="nav-item d-flex align-items-center">
+                            <a class="btn btn-outline-dark boutons_nav" href="?c=profil">Mon profil</a>
+                </li>
             <?php } ?> 
             
 
