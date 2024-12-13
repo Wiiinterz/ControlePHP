@@ -33,4 +33,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     showComment();
+
+    for (let button of buttons) {
+        button.addEventListener('click', function() {
+            if (!button.parentElement.parentElement.parentElement.querySelector('.comment-div-show').querySelector('form')) {
+
+                const form = document.createElement('form');
+                form.action = '?c=commentMessage&post_id=' + button.dataset.postId;
+                form.method = 'post';
+                const textarea = document.createElement('textarea');
+                textarea.classList.add('form-control');  
+                textarea.style.marginTop = '10px';
+                textarea.name = 'content';
+                textarea.placeholder = 'Commentaire';
+                textarea.required = true;
+                form.appendChild(textarea);
+                const formContainer = button.parentElement.parentElement.parentElement.querySelector('.comment-div-show');
+                formContainer.appendChild(form);
+
+            }else {
+                const form = button.parentElement.parentElement.parentElement.querySelector('.comment-div-show').querySelector('form');
+                fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form)
+                }).then(response => {
+                    showComment();
+                    button.parentElement.parentElement.parentElement.querySelector('.comment-div-show').innerHTML = '';
+                });
+
+            }
+        });
+    }
 });
