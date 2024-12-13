@@ -36,4 +36,25 @@ class userController {
             exit();
         }
     }
+
+    function enregistrer() {
+        $nom = $_POST['identifiant'];
+        $password = $_POST['pwd'];
+        $email = $_POST['email'];
+    
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    
+        $requete = $this->pdo->prepare('INSERT INTO users (nom, email, password) VALUES (:nom, :email, :password)');
+        $requete->bindParam(':nom', $nom);
+        $requete->bindParam(':password', $hashedPassword);
+        $requete->bindParam(':email', $email);
+    
+        $ajoutOk = $requete->execute();
+    
+        if ($ajoutOk) {
+            require_once(__DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'Views'.DIRECTORY_SEPARATOR.'Users'.DIRECTORY_SEPARATOR.'login.php');
+        } else {
+            echo "Erreur lors de l'enregistrement de l'utilisateur.";
+        }
+    }
 }
