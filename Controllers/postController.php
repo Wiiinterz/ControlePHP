@@ -107,4 +107,16 @@ class PostController {
             }
         }
     }
+
+    public function listSearches($searchQuery) {
+        if (!isset($_SESSION['id'])) {
+            header('Location: index.php?c=login');
+            exit;
+        }
+
+        $searchModel = new Message($this->pdo);
+        $searches = $searchModel->search($searchQuery);
+
+        require 'Views/Post/searches.php';
+    }
 }

@@ -61,4 +61,18 @@ class Message {
 
         return $requete->execute();
     }
+
+    public function search($searchQuery) {
+        $query = "
+            SELECT p.id, p.titre, p.contenu, u.nom AS nom_utilisateur, p.date_publication, p.utilisateur_id 
+            FROM posts p 
+            JOIN users u ON u.id = p.utilisateur_id 
+            WHERE p.titre LIKE :search_query OR p.contenu LIKE :search_query 
+            ORDER BY p.date_publication DESC
+        ";
+        $stmt = $this->pdo->prepare($query);
+        $stmt->bindValue(':search_query', "%$searchQuery%");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
