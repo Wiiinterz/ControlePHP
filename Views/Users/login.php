@@ -1,4 +1,4 @@
-<h1>Connexion à la Cosina</h1>
+<h1>Connexion</h1>
 
 <form action="?c=verifieconnexion" method="post">
     <div class="mb-3">
