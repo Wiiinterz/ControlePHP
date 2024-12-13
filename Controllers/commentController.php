@@ -1,6 +1,6 @@
 <?php
 
-requireonce(_DIR.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'Models'.DIRECTORY_SEPARATOR.'comment.php');
+require_once(__DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'Models'.DIRECTORY_SEPARATOR.'comment.php');
 
 class CommentController {
     private $pdo;
