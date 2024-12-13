@@ -24,7 +24,7 @@
                 </li>
             <?php } ?> 
             <li>
-                <button id="theme-toggle" class="btn btn-secondary">Mode sombre</button>
+                <button id="theme-toggle" class="btn btn-secondary boutons_nav">Mode sombre</button>
             </li>
 
             
