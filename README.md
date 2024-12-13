@@ -1,5 +1,7 @@
 # Mini Site de Réseau Social d'Entreprise
 
+![alt text](https://raw.githubusercontent.com/Wiiinterz/ControlePHP/refs/heads/main/Logo.png)
+
 ## Description
 Vous allez développer un mini site de réseau social d'entreprise. Ce site permet à des employés de publier des messages et d'interagir via des commentaires. L'architecture du site doit suivre le modèle MVC (Modèle-Vue-Contrôleur), et toutes les données (utilisateurs, messages, commentaires) doivent être stockées dans une base de données MySQL.
 
