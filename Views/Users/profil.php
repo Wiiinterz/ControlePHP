@@ -9,5 +9,5 @@
 <hr>
 <div id='boutons'>
     <a href="?c=listMessages" class='btn btn-primary'>Retour au feed</a>
-    <a href="?c=modifier_profil" id='bouton_modifier_profil' class='btn btn-primary d-none'>Modifier le profil</a>
+    <button id='bouton_modifier_profil' class='btn btn-primary d-none'>Modifier le profil</button>
 </div>

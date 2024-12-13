@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     let modifier_profil = document.getElementById('bouton_modifier_profil');
     const buttons = document.querySelectorAll('.comment-button');
+    const identifiant = document.getElementById('profil_identifiant');
+    const mail = document.getElementById('profil_mail');
+    const updateButton = document.getElementById('bouton_modifier_profil');
+
 
     function showComment() {
         for (let post of document.querySelectorAll('.post')) {
@@ -65,11 +69,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    profil_identifiant?.addEventListener('input', (event) => {
-        modifier_profil.classList.remove('d-none');
+    identifiant?.addEventListener('input', (event) => {
+        updateButton.classList.remove('d-none');
     });
 
-    profil_mail?.addEventListener('input', (event) => {
-        modifier_profil.classList.remove('d-none');
+    mail?.addEventListener('input', (event) => {
+        updateButton.classList.remove('d-none');
     });
-});
+
+    if (updateButton) {
+        updateButton.addEventListener('click', () => {
+            const form = new FormData();
+    
+            form.append('nom', identifiant.textContent ?? identifiant.innerText);
+            form.append('email', mail.textContent ?? mail.innerText);
+    
+            fetch(`?c=modifier_profil`, {
+                method: 'POST',
+                body: form
+            }).then(_response => {
+                window.location.reload();
+            })
+        })
+    }
+    });

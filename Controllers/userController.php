@@ -38,13 +38,22 @@ class userController {
     }
 
     function modifier_profil() {
+        if (!isset($_SESSION['id'])) {
+            header('Location: /');
+            exit();
+        }
+    
+        $id = $_SESSION['id'];
+        $nom = $_POST['nom'];
+        $email = $_POST['email'];
+    
         $requete = $this->pdo->prepare('UPDATE users SET nom = :nom, email = :email WHERE id = :id');
         $requete->bindParam(':id', $id);
         $requete->bindParam(':nom', $nom);
         $requete->bindParam(':email', $email);
-
+    
         $modifOk = $requete->execute();
-
+    
         if ($modifOk) {
             echo "Profil modifié avec succès.";
         } else {
