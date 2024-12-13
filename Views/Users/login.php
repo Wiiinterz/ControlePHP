@@ -1,3 +1,4 @@
+<script src="theme.js"></script>
 <h1>Connexion</h1>
 
 <form action="?c=verifieconnexion" method="post">

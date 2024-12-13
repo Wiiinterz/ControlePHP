@@ -91,3 +91,4 @@ if(!isset($_GET["x"])){
     require_once __DIR__  . DIRECTORY_SEPARATOR . 'Views' . DIRECTORY_SEPARATOR . 'footer.php';
 }
 ?>
+

@@ -39,3 +39,71 @@
 }
 
 
+
+
+body.dark-theme{
+    background-color: #333;
+    color: white;
+}
+.connexion.dark-theme{
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex; 
+    background-color: #333; 
+    color: white; 
+}
+
+#postPage.dark-theme{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+
+#createPost.dark-theme {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+#boutons_nav.dark-theme {
+    margin-left: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+#feed.dark-theme{
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+}
+#buttons_for_post.dark-theme{
+    display: flex;
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+}
+
+#utils_connected_user.dark-theme{
+    text-align: right;
+    margin-left: auto;
+    background-color: #333;
+    color: white;
+}
+
+body.dark-theme .btn {
+    background-color: #444444;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+body.dark-theme .card-body {
+    background-color: #444444;
+    color: #ffffff;
+    border-color: #ffffff;
+}

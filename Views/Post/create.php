@@ -1,3 +1,4 @@
+<script src="theme.js"></script>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,7 +19,7 @@
                 <label for="content">Contenu :</label>
                 <textarea id="content" name="content" required></textarea>
             </div>
-            <button type="submit">Publier</button>
+            <button type="submit" class="btn btn-outline-primary btn-sm">Publier</button>
         </form>
     </div>
 </body>

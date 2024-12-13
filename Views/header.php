@@ -23,6 +23,10 @@
                             <a class="btn btn-outline-dark boutons_nav" href="?c=profil">Mon profil</a>
                 </li>
             <?php } ?> 
+            <li>
+                <button id="theme-toggle" class="btn btn-secondary">Mode sombre</button>
+            </li>
+
             
 
         </ul>
@@ -33,7 +37,7 @@
                 <?php if (isset($_SESSION['id'])) { ?>
                     <ul class="nav d-flex flex-row">
                         <li class="nav-item  align-items-center">
-                            <a class="btn btn-outline-dark" href="?c=deconnexion">Déconnexion</a>
+                            <a class="btn btn-outline-dark" id='boutons_nav' href="?c=deconnexion">Déconnexion</a>
                         </li>
                     </ul>
                 <?php } else { ?>

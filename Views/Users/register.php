@@ -1,3 +1,4 @@
+<script src="theme.js"></script>
 <h1>Inscription</h1>
 
 <form action="?c=inscrire" method="post">
