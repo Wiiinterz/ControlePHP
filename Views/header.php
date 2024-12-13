@@ -11,6 +11,7 @@
 <body class="p-2">
     <nav class="navbar navbar-expand-lg">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
             <li class="nav-item d-flex align-items-center">
                 <a class="btn btn-outline-dark" id="boutons_nav" href="?c=listMessages">Feed des messages</a>
             </li>
@@ -21,6 +22,9 @@
             
 
         </ul>
+        <div id="Logo">
+            <img src="logo.png" alt="Logo">
+        </div>
         <div class="connexion">
                 <?php if (isset($_SESSION['id'])) { ?>
                     <ul class="nav d-flex flex-row">
